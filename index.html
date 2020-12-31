@@ -1,5 +1,31 @@
-test
+<html>
+	<head>
+	<script>
+        function generate() {
+          var names = ["prinsgemalen (3)", "Grønland (3)", "Færøerne (3)", "Corona (1)", "rejse (2)", "Danmark (1)", "politiet (5)", "kronprinsen (5)", "sygdom (2)", "ensom (5)", "Gud (2)", "Nytår (3)", "2020 (5)", "2021 (5)", "Nye år (3)", "måske (1)", "ja (1)", "ønsker (3)", "mennesker (2)", "alene (1)", "venner (3)", "familie (5)", "Mette Frederiksen (10)", "regeringen (3)", "Hjørring (bund)", "Vendsyssel (bund)", "Nordjylland (bund)", "mink (10)", "landmand (3)", "normal (1)", "influenza (5)", "Læge (2)", "Sygeplejerske (2)", "hospital (1)", "soldat (1)", "hjerneblødning (halv bund)", "Offentlig transport (5)", "mundbind (3)", "håndsprit (5)", "Besøge (2)", "'når hun ikke kan finde det rigtige papir' (fælles skål indtil hun gør)"];
 
+		for (var i = names.length - 1; i > 0; i--) {
+			        var j = Math.floor(Math.random() * (i + 1));
+			        var temp = names[i];
+			        names[i] = names[j];
+			        names[j] = temp;
+			    }
+
+		document.getElementById("nr1").innerHTML = names[0];
+		document.getElementById("nr2").innerHTML = names[1];
+		document.getElementById("nr3").innerHTML = names[2];
+		document.getElementById("nr4").innerHTML = names[3];
+		document.getElementById("nr5").innerHTML = names[4];
+		document.getElementById("nr6").innerHTML = names[5];
+		document.getElementById("nr7").innerHTML = names[6];
+		document.getElementById("nr8").innerHTML = names[7];
+		document.getElementById("nr9").innerHTML = names[8];
+	}
+	</script>
+	</head>
+	<body>
+		<h1>Dronningens nytårs druk</h1>
+		<button onclick="generate()">Generer plade</button>
 <table>
 	<tr>
 		<td id="nr1"></td>
@@ -18,3 +44,6 @@ test
 		<td id="nr9"></td>
 	</tr>
 </table>
+
+	</body>
+</html>
